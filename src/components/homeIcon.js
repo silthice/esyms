@@ -4,8 +4,6 @@ import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import Svg, {Path, G, Mask, Rect} from 'react-native-svg';
 
 const HomeIcon = props => {
-  console.log('check props', props);
-
   const iconHeight = props.height;
   const iconWidth = props.width;
   const iconColor = props.fill;

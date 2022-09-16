@@ -4,8 +4,6 @@ import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 
 const CartIcon = props => {
-  console.log('check props', props);
-
   const iconHeight = props.height;
   const iconWidth = props.width;
   const iconColor = props.fill;
