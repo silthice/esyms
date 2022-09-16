@@ -1,6 +1,4 @@
-import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import Svg, {Path, G, Defs, ClipPath, Rect} from 'react-native-svg';
 
 const NotificationIcon = props => {
@@ -34,7 +32,4 @@ const NotificationIcon = props => {
     </Svg>
   );
 };
-
-const styles = StyleSheet.create({});
-
 export default NotificationIcon;

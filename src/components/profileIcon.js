@@ -1,6 +1,4 @@
-import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 
 const ProfileIcon = props => {
@@ -21,7 +19,5 @@ const ProfileIcon = props => {
     </Svg>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default ProfileIcon;

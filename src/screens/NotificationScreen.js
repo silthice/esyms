@@ -1,34 +1,23 @@
-import {useNavigation} from '@react-navigation/native';
-import {
-  StyleSheet,
-  View,
-  SafeAreaView,
-  FlatList,
-  Text,
-  Dimensions,
-  TextInput,
-  Alert
-} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-
-const screenHeight = Dimensions.get('window').height;
+import {StyleSheet, View, Text} from 'react-native';
+import React from 'react';
+import {Theme} from '../utils/theme';
 
 const NotificationScreen = () => {
-  const navigation = useNavigation();
-  const dispatch = useDispatch();
-
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>NotificationScreen</Text>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text style={{fontSize: 20, fontFamily: 'Inter-Bold', color: Theme.COLOR_FFF}}>
+        Upcoming Soon !
+      </Text>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0E0E23'
+    backgroundColor: Theme.COLOR_6CC8BE,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 

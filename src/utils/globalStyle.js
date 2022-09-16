@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Theme} from './theme';
 
 export const globalStyles = StyleSheet.create({
@@ -16,11 +16,15 @@ export const globalStyles = StyleSheet.create({
   price: {
     fontSize: 11,
     fontFamily: 'Inter-Medium',
-    color: Theme.COLOR_8F8F8F
+    color: Theme.COLOR_8F8F8F,
+    textDecorationLine: 'line-through'
   },
   specialPrice: {
     fontSize: 14,
     fontFamily: 'Inter-Bold',
     color: Theme.COLOR_33A197
+  },
+  flexDirectionRow: {
+    flexDirection: 'row'
   }
 });

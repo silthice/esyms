@@ -1,6 +1,4 @@
-import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import Svg, {Path, G, Mask, Rect} from 'react-native-svg';
 
 const HomeIcon = props => {
@@ -29,7 +27,5 @@ const HomeIcon = props => {
     </Svg>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default HomeIcon;
