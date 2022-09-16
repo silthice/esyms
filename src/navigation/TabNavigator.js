@@ -10,6 +10,8 @@ import ExploreIcon from '../components/exploreIcon';
 import ProfileIcon from '../components/profileIcon';
 import NotificationIcon from '../components/notificationIcon';
 import OrderIcon from '../components/orderIcon';
+import {globalStyles} from '../utils/globalStyle';
+import {Theme} from '../utils/theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,9 +20,9 @@ const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarLabelStyle: {fontSize: 11, fontFamily: 'Inter-SemiBold'},
-        tabBarActiveTintColor: '#33A197',
-        tabBarInactiveTintColor: '#8F8F8F'
+        tabBarLabelStyle: globalStyles.tabBarFont,
+        tabBarActiveTintColor: Theme.COLOR_33A197,
+        tabBarInactiveTintColor: Theme.COLOR_8F8F8F
       }}>
       <Tab.Screen
         name="Home"
@@ -28,7 +30,11 @@ const TabNavigator = () => {
         options={{
           tabBarIcon: tabInfo => {
             return (
-              <HomeIcon height={25} width={25} fill={tabInfo.focused ? '#33A197' : '#8F8F8F'} />
+              <HomeIcon
+                height={25}
+                width={25}
+                fill={tabInfo.focused ? Theme.COLOR_33A197 : Theme.COLOR_8F8F8F}
+              />
             );
           }
         }}></Tab.Screen>
@@ -38,7 +44,11 @@ const TabNavigator = () => {
         options={{
           tabBarIcon: tabInfo => {
             return (
-              <ExploreIcon height={25} width={25} fill={tabInfo.focused ? '#33A197' : '#8F8F8F'} />
+              <ExploreIcon
+                height={25}
+                width={25}
+                fill={tabInfo.focused ? Theme.COLOR_33A197 : Theme.COLOR_8F8F8F}
+              />
             );
           }
         }}></Tab.Screen>
@@ -48,7 +58,11 @@ const TabNavigator = () => {
         options={{
           tabBarIcon: tabInfo => {
             return (
-              <OrderIcon height={25} width={25} fill={tabInfo.focused ? '#33A197' : '#8F8F8F'} />
+              <OrderIcon
+                height={25}
+                width={25}
+                fill={tabInfo.focused ? Theme.COLOR_33A197 : Theme.COLOR_8F8F8F}
+              />
             );
           }
         }}></Tab.Screen>
@@ -61,7 +75,7 @@ const TabNavigator = () => {
               <NotificationIcon
                 height={25}
                 width={25}
-                fill={tabInfo.focused ? '#33A197' : '#8F8F8F'}
+                fill={tabInfo.focused ? Theme.COLOR_33A197 : Theme.COLOR_8F8F8F}
               />
             );
           }
@@ -72,7 +86,11 @@ const TabNavigator = () => {
         options={{
           tabBarIcon: tabInfo => {
             return (
-              <ProfileIcon height={25} width={25} fill={tabInfo.focused ? '#33A197' : '#8F8F8F'} />
+              <ProfileIcon
+                height={25}
+                width={25}
+                fill={tabInfo.focused ? Theme.COLOR_33A197 : Theme.COLOR_8F8F8F}
+              />
             );
           }
         }}></Tab.Screen>
