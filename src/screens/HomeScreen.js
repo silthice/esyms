@@ -79,7 +79,7 @@ const HomeScreen = () => {
 
   function renderProductItems(item, index) {
     return (
-      <View style={{marginBottom: index === productList.length - 1 ? screenHeight * 0.5 : 0}}>
+      <View style={{marginBottom: index === productList.length - 1 ? screenHeight * 0.15 : 0}}>
         <ProductItem item={item}></ProductItem>
       </View>
     );
@@ -88,27 +88,26 @@ const HomeScreen = () => {
   return (
     <View>
       <SafeAreaView style={styles.statusBarContainer} />
+      <View style={styles.headerBackground}></View>
 
-      <View style={styles.container}>
-        <View style={{height: 190, backgroundColor: Theme.COLOR_6CC8BE}}>
+      <View style={styles.contentContainer}>
+        <View>
           {renderHeader()}
           {renderBanner()}
-
-          <View style={styles.flatListContainer}>
-            <FlatList
-              showsHorizontalScrollIndicator={false}
-              showsVerticalScrollIndicator={false}
-              numColumns={2}
-              columnWrapperStyle={{justifyContent: 'space-between', marginBottom: 24}}
-              data={productList}
-              renderItem={({item, index}) => renderProductItems(item, index)}
-              onEndReached={() => {
-                onLoadMore();
-              }}
-              onEndReachedThreshold={0}
-            />
-          </View>
         </View>
+        <FlatList
+          style={styles.flatList}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+          numColumns={2}
+          columnWrapperStyle={{justifyContent: 'space-between', marginBottom: 24}}
+          data={productList}
+          renderItem={({item, index}) => renderProductItems(item, index)}
+          onEndReached={() => {
+            onLoadMore();
+          }}
+          onEndReachedThreshold={0.2}
+        />
       </View>
       <Spinner visible={spinnerVisible} />
     </View>
@@ -120,9 +119,15 @@ const styles = StyleSheet.create({
     flex: 0,
     backgroundColor: Theme.COLOR_6CC8BE
   },
-  container: {
-    flex: 1,
-    backgroundColor: Theme.COLOR_FFF
+  headerBackground: {
+    height: 190,
+    backgroundColor: Theme.COLOR_6CC8BE,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 0
   },
   headerContainer: {
     flexDirection: 'row',
@@ -169,10 +174,13 @@ const styles = StyleSheet.create({
   bannerContainer: {
     margin: 16,
     marginBottom: 20,
-    height: 190
+    height: 165
   },
-  flatListContainer: {
+  contentContainer: {
     height: screenHeight,
+    zIndex: 1
+  },
+  flatList: {
     paddingHorizontal: 16
   },
   searchIconStyle: {
