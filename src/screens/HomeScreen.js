@@ -20,7 +20,7 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-        <Text>HomeScreen</Text>
+      <Text>HomeScreen</Text>
     </SafeAreaView>
   );
 };
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0E0E23'
-  },
+  }
 });
 
 export default HomeScreen;

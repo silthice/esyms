@@ -20,7 +20,7 @@ const ProfileScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-        <Text>ProfileScreen</Text>
+      <Text>ProfileScreen</Text>
     </SafeAreaView>
   );
 };
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0E0E23'
-  },
+  }
 });
 
 export default ProfileScreen;

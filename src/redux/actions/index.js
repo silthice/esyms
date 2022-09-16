@@ -1,4 +1,3 @@
-const allActions = {
-};
+const allActions = {};
 
 export default allActions;
