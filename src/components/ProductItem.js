@@ -7,14 +7,14 @@ import {Theme} from '../utils/theme';
 const ProductItem = props => {
   const productNameEN = props.item.name.en;
   const productRating = props.item.rating ? props.item.rating : 0;
-  const productImgSrc = require('../assets/banner.png');
+  const productImgSrc = 'https://cdn.esyms.com/' + props.item.img[0].src;
   const productPrice = parseFloat(props.item.price).toFixed(2);
   const productSpecialPrice = parseFloat(props.item.specialPrice).toFixed(2);
 
   return (
     <View style={styles.productContainer}>
       <View style={styles.imageContainer}>
-        <Image style={styles.imageStyle} source={productImgSrc}></Image>
+        <Image style={styles.imageStyle} source={{uri: productImgSrc}}></Image>
       </View>
 
       <View style={styles.detailsContainer}>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   imageStyle: {
     height: '100%',
     width: '100%',
-    borderRadius: 8
+    borderRadius: 8,
   },
   detailsContainer: {
     borderBottomLeftRadius: 8,
